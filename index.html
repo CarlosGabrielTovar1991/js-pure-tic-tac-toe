@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 en raya</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <h1>3 en raya!</h1>
+  <div class="contenedor-grilla">
+    <div id="grilla-juego" class="grilla-juego invisible">
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 0)" id="boton-casilla-0"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 1)" id="boton-casilla-1"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 2)" id="boton-casilla-2"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 3)" id="boton-casilla-3"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 4)" id="boton-casilla-4"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 5)" id="boton-casilla-5"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 6)" id="boton-casilla-6"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 7)" id="boton-casilla-7"></button>
+      </div>
+      <div class="casilla-juego">
+        <button class="boton-juego boton-no-jugado boton-jugador" onclick="jugarCasilla(this, 8)" id="boton-casilla-8"></button>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton boton-jugar" id="boton-jugar" onclick="empezarJuego()">Jugar</button>
+    <button class="boton boton-reiniciar" id="boton-reinciar" disabled onclick="reiniciarJuego()">Reiniciar</button>
+  </div>
+  <div class="mensaje-resultado" id="mensaje-resultado">
+    <h2 id="texto-resultado">RESULTADO DEL JUEGO</h2>
+    <p>Oprime "Reiniciar" para volver a jugar</p>
+  </div>
+  <audio id="musica-de-fondo" loop>
+    <source src="/assets/sounds/monkeys-spinning-monkeys.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sonido-victoria">
+    <source src="/assets/sounds/yahoo.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sonido-derrota">
+    <source src="/assets/sounds/oh-no.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sonido-empate">
+    <source src="/assets/sounds/oops.mp3" type="audio/mpeg">
+  </audio>
+  <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>

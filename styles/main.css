@@ -1,0 +1,172 @@
+:root {
+  --bordes-casilla: 6px solid #000000;
+}
+
+@font-face {
+  font-family: 'Crayon works';
+  src: url('../assets/fonts/crayon_works/Crayon\ Works.otf');
+}
+
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Crayon works';
+  margin: 0;
+  padding: 25px;
+  background-image: url('../assets/images/paper.png');
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button.boton {
+  font-family: 'Crayon works';
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+button.boton:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+button.boton-jugar {
+  color: #104e00;
+  margin-right: 20px;
+}
+
+button.boton-reiniciar {
+  color: #4e0000;
+}
+
+h1 {
+  font-size: 56px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+p {
+  font-size: 32px;
+  margin: 0;
+}
+
+button.boton-jugar:not(:disabled):hover {
+  color: #33ff00;
+}
+
+button.boton-reiniciar:not(:disabled):hover {
+  color: #ff0000;
+}
+
+div.grilla-juego.invisible {
+  display: none;
+}
+
+div.contenedor-grilla {
+  flex: 1 1 auto;
+  margin-top: 25px;
+}
+
+div.grilla-juego {
+  display: grid;
+  grid-template-columns: 160px 160px 160px;
+  grid-template-rows: 160px 160px 160px;
+  justify-items: center;
+  align-items: center;
+}
+
+div.casilla-juego {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+
+button.boton-juego {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+div.grilla-juego > div.casilla-juego:nth-child(-n+3) {
+  border-bottom: var(--bordes-casilla);
+}
+
+div.grilla-juego > div.casilla-juego:nth-child(3n+1) {
+  border-right: var(--bordes-casilla);
+}
+
+div.grilla-juego > div.casilla-juego:nth-child(3n) {
+  border-left: var(--bordes-casilla);
+}
+
+div.grilla-juego > div.casilla-juego:nth-child(n+7) {
+  border-top: var(--bordes-casilla);
+}
+
+button.boton-no-jugado {
+  opacity: 0.15;
+}
+
+button.boton-juego:not(:disabled):hover, button.boton-jugado {
+  opacity: 1;
+}
+
+button.boton-jugador {
+ background-image: url('../assets/images/circle.png');
+}
+
+button.boton-computadora {
+ background-image: url('../assets/images/cross.png');
+}
+
+.mensaje-resultado {
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  box-sizing: border-box;
+  width: 80vw;
+  height: auto;
+  padding: 25px;
+  background-image: url('../assets/images/paper.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #000000;
+  display: none;
+}
+
+.mensaje-resultado.mostrar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
